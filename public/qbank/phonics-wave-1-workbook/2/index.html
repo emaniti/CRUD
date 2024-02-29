@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>write</title>
+        <link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../resources/css/fontawesome-all.css" 
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <style>
+            .page-container{
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: block;
+                margin: auto;
+                overflow: hidden;
+            }
+            .backgroundImageContainer{
+                width: 100%;
+                height: auto;
+            }
+            #mice{
+                position: absolute;
+				top: -7.5%;
+                left: 30px;
+				width: 5%;
+                height: 16vw;
+                padding-top: 3%;
+                cursor: pointer;
+            }
+            #mice img{
+                transform:rotateZ(45deg);
+            }
+            .validate-message {
+                position: absolute;
+                left: -40%;
+                bottom: 0%;
+                font-size: 3vw;
+                color: #27ae60;
+                width: 40%;
+                height: 6vw;
+                border: 2px solid #27ae60;
+                border-left-width: 10px;
+                display: flex;
+                align-items: center;
+                background-color: #FFF;
+                border-radius: 5px;
+                padding: 14px !important;
+            }
+            #valid-message-text{
+                padding-top: 15px;
+                padding-left: 7px;
+                font-weight: bold;
+            }
+            /* page content */
+            .page-content .circle-btn{
+                position: absolute;
+                width: 15%;
+                height: 55%;
+                /* border-radius: 59%;     */
+                text-align: center;            
+                font-size: 6vw;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                background: transparent;
+                
+            }
+            .circle-bt{
+                position: absolute;
+                top: 22%;
+                left: 14%;
+                width: 55%;
+                border-radius: unset;
+                height: 7%;
+                clip-path: unset;
+                background: transparent;
+            }
+            .circle-bt img{
+                width: 100%;
+                height: 100%;
+            }
+            .page-content .circle-btn:first-child{    
+                top: 7.4%;
+                left: 9%;
+            
+                border-radius: unset;
+           
+                clip-path:unset;
+                background: black;
+            }
+            .page-content .circle-btn:nth-child(2){
+				top: 43%;
+                right: 70%;
+                background-size: 100% 100%;             
+            }
+			 .page-content .circle-btn:nth-child(3){
+                top: 44%;
+                right: 43.2%;
+                background-size: 100% 100%;             
+            }
+            .page-content .circle-btn:nth-child(4){                             
+				top: 43%;
+                right: 12.5%;
+                background-size: 100% 100%;
+            }
+            .page-content .circle-btn:nth-child(5){                                                
+				top: 90%;
+				right: 19.3%;
+                background-size: 100% 100%;
+            }
+            
+            .eleTogel img{
+                position: absolute;
+                top: 19%;
+                left: 17%;
+                width: 65%;
+            }
+            
+            @media only screen and (max-width: 768px) {
+                .backgroundImageContainer{
+                    height: auto;
+                }
+            }
+            @media only screen and (max-width: 600px) {
+                .backgroundImageContainer{
+                    height: auto;
+                }
+                #mice{
+                    padding-top: 5%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page-container">
+            <img src="images/2.png" alt="Background Image" class="backgroundImageContainer" />
+            <div id="mice">
+                <!-- Add A Shared Image Link -->
+                <img src="../../resources/images/megaphone.svg" alt="Mice" class="img-fluid">
+            </div>
+            <div class="page-content">
+                <!-- frist -->
+                <div class="circle-bt" id="titleSound"></div>
+
+                <div class="circle-btn eleTogel"  validValue="true"></div>
+                <div class="circle-btn eleTogel"  validValue="true"></div>
+                <div class="circle-btn eleTogel"  validValue="true"></div>
+				
+            </div>
+            <div class="validate-message px-2 py-2" id="validate-message">
+                <i id="like-icon" class="fas fa-thumbs-up"></i>
+                <p id="valid-message-text">Good</p>
+            </div>
+        </div>
+        <script src="../../resources/js/jquery-3.2.1.min.js"></script>
+        <script src="../../resources/js/waveBooksEn.js"></script>
+        <script>
+            mice.addEventListener('click',()=>{
+            let initAudio = new Audio('Audio/voice.mp3');
+            initAudio.play();
+        })
+        document.querySelectorAll('.eleTogel').forEach(
+			item=>{
+				item.addEventListener('click',function(){
+					item.style.cssText=' background-image: url(images/ri.png)';			
+
+				})
+			}
+		)
+
+        // titleSound.addEventListener('click',()=>{
+        //     let initAudio = new Audio('Audio/voice.mp3');
+        //     initAudio.play();
+        // })
+        
+		// add custome effect 
+		/*document.querySelectorAll('.eleTogel').forEach(
+			item=>{
+				item.addEventListener('click',function(){
+					if(item.getAttribute('validValue') == "true"){
+						checkValidity (true) 
+						item.style.cssText=' background-image: url(images/ri.png)';
+					}else if (item.getAttribute("validValue") == "false"){
+						checkValidity(false)
+						item.style.cssText=' background-image: url(images/wr.png)';
+						setTimeout(function(){   item.style.cssText='item.style.cssText="border: 5px solid rgba(255, 255, 255, 0);transition:1s"'; }, 1500);
+					}
+				
+
+				})
+			}
+		)*/
+        /*document.querySelectorAll(".interLetter").forEach(function(e){
+                e.addEventListener("input",function(){
+                    var letter = e.getAttribute("validValue");
+                    var dataCome = e.value;
+                    if( e.value.length >= 4){
+                        if(letter == dataCome.toLowerCase()){
+                        setTimeout(function(){   checkValidity(true); }, 1500);
+                       
+                    }else{
+                        setTimeout(function(){   checkValidity(false); }, 1500);
+                        
+                    }
+                    }
+                })
+            })*/
+            /*document.querySelectorAll(".interLetterthree").forEach(function(e){
+                e.addEventListener("input",function(){
+                    var letter = e.getAttribute("validValue");
+                    var dataCome = e.value;
+                    if( e.value.length >= 3){
+                        if(letter == dataCome.toLowerCase()){
+                        setTimeout(function(){   checkValidity(true); }, 1500);
+                       
+                    }else{
+                        setTimeout(function(){   checkValidity(false); }, 1500);
+                        
+                    }
+                    }
+                })
+            })*/
+            /*document.querySelectorAll(".interLetterFive").forEach(function(e){
+                e.addEventListener("input",function(){
+                    var letter = e.getAttribute("validValue");
+                    var dataCome = e.value;
+                    if( e.value.length >= 5){
+                        if(letter == dataCome.toLowerCase()){
+                        setTimeout(function(){   checkValidity(true); }, 1500);
+                       
+                    }else{
+                        setTimeout(function(){   checkValidity(false); }, 1500);
+                        
+                    }
+                    }
+                })
+            })*/
+            
+        </script>
+    </body>
+</html>

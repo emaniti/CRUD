@@ -1,0 +1,95 @@
+.root{
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+#mice{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100px;
+    transform:rotateZ(45deg);
+    cursor: pointer;
+    z-index: 184;
+}
+
+#container{ 
+    position:absolute;
+    top: 0;
+    cursor: url('../images/pencil-cursor.png') 4 12, auto;
+    right: 0;
+    left: 0;
+}
+.pen-tool{
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    left: auto;
+    z-index: 184;
+    display: flex;
+
+}
+.pen-tool select , .pen-tool input ,.pen-tool label {
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 0px) { 
+   .root{
+    width: 100%;
+    }
+    .pen-tool{
+        top: 0px;
+        right: 0px;
+    }
+ }
+
+
+
+@media (min-width: 576px) {
+  
+  }
+
+
+@media (min-width: 768px) { 
+
+    .pen-tool{
+        top: 0px;
+        right: 15px;
+    }
+
+ }
+
+
+@media (min-width: 992px) { 
+    .root{
+        width: 70%;
+        }
+
+ }
+
+
+@media (min-width: 1200px) { 
+    .root{
+        width: 70%;
+        }
+ }
+
+
+@media (min-width: 1400px) {  }

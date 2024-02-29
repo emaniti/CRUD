@@ -1,0 +1,184 @@
+$blue: #015dac;
+$green: #1bb4b9;
+$orange: #f5b120;
+
+/* -----------------------------------------
+  BASE
+----------------------------------------- */
+body {
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+}
+
+.breadcrumb-bar {
+  .breadcrumb {
+    font-size: 12px;
+  }
+}
+
+h4.with-dash {
+  color: $blue;
+  font-size: 21px;
+  text-transform: uppercase;
+  &:after {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: $green;
+    content: "";
+    margin-top: 10px;
+  }
+  &.text-center {
+    &::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+/* -----------------------------------------
+  Page :: Homepage
+----------------------------------------- */
+.single-activity {
+  .single-activity-icon {
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 4px;
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.home-intro {
+  padding: 90px;
+  h2 {
+    color: $green;
+    line-height: 1.25;
+    text-shadow: 0 1px 1px #fff;
+    span {
+      color: $orange;
+    }
+  }
+  p {
+    font-size: 1.3rem;
+    margin: 30px auto;
+    line-height: 1.5;
+  }
+}
+
+.home-service {
+  h4 {
+    a {
+      font-size: 1.35rem;
+    }
+  }
+  p {
+    font-size: 1rem;
+    line-height: normal;
+  }
+}
+
+.single-items {
+  .overlay-effect,
+  .book-wrapper {
+    > a {
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      background: #fafafa;
+      border: 1px solid #eee;
+      img {
+        max-width: 200px;
+        max-height: 240px;
+        object-fit: cover;
+        transform: rotate(15deg);
+        box-shadow: 2px 2px 3px #ccc;
+      }
+    }
+  }
+}
+.gallery-icon,
+.single-class-image > a:before,
+.overlay-effect > a:before {
+  z-index: 1;
+}
+.view-gallery {
+  margin-top: 45px;
+  > h4 {
+    margin-bottom: 20px;
+    display: block;
+  }
+}
+
+/* -----------------------------------------
+  Page :: About
+----------------------------------------- */
+.about-page {
+  .about-text-container {
+    margin-bottom: 30px;
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  .skill-image {
+    margin-bottom: 30px;
+    position: relative;
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      background: $orange;
+      position: absolute;
+      width: 50%;
+      height: 6px;
+      background: orange;
+    }
+    &::before {
+      top: -6px;
+      left: 0;
+    }
+    &::after {
+      bottom: -6px;
+      right: 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.intro-text {
+  max-width: 75%;
+}
+
+/* -----------------------------------------
+  Page :: Blog
+----------------------------------------- */
+.blog-details-area {
+  .blog-post-details > span {
+    font-size: 14px;
+    font-style: normal;
+    color: #999;
+  }
+  .single-widget-container {
+    margin-bottom: 30px;
+  }
+}
+
+/* -----------------------------------------
+  Page :: Contact
+----------------------------------------- */
+.contact-text {
+  h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

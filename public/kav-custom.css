@@ -1,0 +1,192 @@
+/* -----------------------------------------
+  BASE
+----------------------------------------- */
+body {
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+}
+
+.breadcrumb-bar .breadcrumb {
+  font-size: 12px;
+}
+
+h4.with-dash {
+  color: #015dac;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+h4.with-dash:after {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #1bb4b9;
+  content: "";
+  margin-top: 10px;
+}
+
+h4.with-dash.text-center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -----------------------------------------
+  Page :: Homepage
+----------------------------------------- */
+.single-activity .single-activity-icon {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 4px;
+}
+
+.single-activity .single-activity-icon img {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home-intro {
+  padding: 90px;
+}
+
+.home-intro h2 {
+  color: #1bb4b9;
+  line-height: 1.25;
+  text-shadow: 0 1px 1px #fff;
+}
+
+.home-intro h2 span {
+  color: #f5b120;
+}
+
+.home-intro p {
+  font-size: 1.3rem;
+  margin: 30px auto;
+  line-height: 1.5;
+}
+
+.home-service h4 a {
+  font-size: 1.35rem;
+}
+
+.home-service p {
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.single-items .overlay-effect > a,
+.single-items .book-wrapper > a {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+
+.single-items .overlay-effect > a img,
+.single-items .book-wrapper > a img {
+  max-width: 200px;
+  max-height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  -webkit-box-shadow: 2px 2px 3px #ccc;
+          box-shadow: 2px 2px 3px #ccc;
+}
+
+.gallery-icon,
+.single-class-image > a:before,
+.overlay-effect > a:before {
+  z-index: 1;
+}
+
+.view-gallery {
+  margin-top: 45px;
+}
+
+.view-gallery > h4 {
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* -----------------------------------------
+  Page :: About
+----------------------------------------- */
+.about-page .about-text-container {
+  margin-bottom: 30px;
+}
+
+.about-page .about-text-container p {
+  margin-bottom: 15px;
+}
+
+.about-page .skill-image {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.about-page .skill-image::before, .about-page .skill-image::after {
+  display: block;
+  content: "";
+  background: #f5b120;
+  position: absolute;
+  width: 50%;
+  height: 6px;
+  background: orange;
+}
+
+.about-page .skill-image::before {
+  top: -6px;
+  left: 0;
+}
+
+.about-page .skill-image::after {
+  bottom: -6px;
+  right: 0;
+}
+
+.about-page .skill-image img {
+  width: 100%;
+}
+
+.intro-text {
+  max-width: 75%;
+}
+
+/* -----------------------------------------
+  Page :: Blog
+----------------------------------------- */
+.blog-details-area .blog-post-details > span {
+  font-size: 14px;
+  font-style: normal;
+  color: #999;
+}
+
+.blog-details-area .single-widget-container {
+  margin-bottom: 30px;
+}
+
+/* -----------------------------------------
+  Page :: Contact
+----------------------------------------- */
+.contact-text h4 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=kav-custom.css.map */
