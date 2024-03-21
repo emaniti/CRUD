@@ -25,7 +25,6 @@ class StoreArticleRequest extends FormRequest
     {
         return [
             'title' => 'required|unique:articles|max:255',
-            'article_id' => 'required',
             'main_image' => 'required|image|max:2048|mimes:jpg,bmp,png',
             'images[]' => 'image|max:2048|mimes:jpg,bmp,png'
         ];
